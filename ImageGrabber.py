@@ -140,9 +140,9 @@ def process_paths(image_paths):
             else:
                 print('Is a duplicate ({0})'.format(filename))
                 delete_file(tmp_filename)
-        except:
+        except urllib2.HTTPError:
             print('Unable to download ({0})'.format(filename))
-    
+
     print('Processing Complete')
 
 
