@@ -90,10 +90,6 @@ def move_file(tmp_filename, dirname, last_file, index_file):
     f.close()
 
 
-def delete_file(filename):
-    os.remove(filename)
-
-
 def process_paths(image_paths):
     """Download images and do the magic"""
     print('')
@@ -114,7 +110,7 @@ def process_paths(image_paths):
                 move_file(tmp_filename, dirname, last_file, index_file)
             else:
                 print('Is a duplicate ({0})'.format(filename))
-                delete_file(tmp_filename)
+                os.remove(tmp_filename)
         except urllib2.HTTPError:
             print('Unable to download ({0})'.format(filename))
 
