@@ -15,8 +15,8 @@ t = 15  # Time period (in seconds) if periodic=True, otherwise ignored
 paths = [
     'http://www.nationalparks.gov.uk/snwebcam/webcam1.jpg',
     'http://webcams.mathew-street.com/static/mathewst/webcam1_static.jpg',
-    'http://www.wirralcam.com/csource/floral.jpg',
-    'http://www.wirralcam.org/csource/nb11.jpg'
+    'http://www.wirralcam.org/csource/ph15jul.jpg',
+    'http://www2.wirralcam.org/livesource/fslarge.jpg'
     ]
     
 ########################
