@@ -146,8 +146,9 @@ def process_paths(image_paths):
     print('Processing Complete')
 
 
-while True:
-    process_paths(paths)
-    if not periodic:
-        break
-    sleep(t)
+if __name__ == '__main__':
+    while True:
+        process_paths(paths)
+        if not periodic:
+            break
+        sleep(t)
