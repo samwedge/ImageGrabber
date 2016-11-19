@@ -129,10 +129,10 @@ def process_paths(image_paths):
         dirname = os.path.join('IMAGES', os.path.splitext(filename)[0])
         index_file = 'index.txt'
         
-        try:    
+        try:
             tmp_filename = get_file(path, filename)
             create_directory(dirname)
-            
+
             last_file = get_last_file(dirname, index_file)
             if not is_duplicate(tmp_filename, last_file):
                 print('Not a duplicate ({0})'.format(filename))
@@ -140,9 +140,9 @@ def process_paths(image_paths):
             else:
                 print('Is a duplicate ({0})'.format(filename))
                 delete_file(tmp_filename)
-        except:
+        except urllib2.HTTPError:
             print('Unable to download ({0})'.format(filename))
-    
+
     print('Processing Complete')
 
 
