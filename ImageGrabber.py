@@ -1,29 +1,4 @@
-"""
-Script to download the webcam images in the list of paths
- 
-Checks if the files have already been downloaded before adding to directory
-(i.e. checks if the latest image is different to the previous image).
- 
-If "periodic=True", the code will keep running and re-download the images at a
-timescale defined in seconds by "t".
- 
-If "periodic=False", the code will run as a one-off. Use this if you want to
-set up a job with Cron so that python isn't running all of the time. The end
-result is the same, but the latter has the benefit that if Python crashes or the
-computer is restarted, the code will still continue as planned at the next
-available opportunity.
- 
-Note that this doesn't strictly download the images every t seconds because I
-have done this a lazy way. It is every t seconds + the time taken to download
-and process the images. The Cron method would solve this.
- 
-Caution: The filename part of each path must be unique, or odd things will
-happen!
- 
-Sam Wedge
-samwedge.co.uk
-"""
- 
+
 import os
 import shutil
 import urllib2
